@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--blue:#1749aa;--purple:#8d70c5;--ink:#131317;--muted:#6d6d77;--white:#fff;--line:#e7e7ed}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}body{margin:0;background:var(--white);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}button,a{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible{outline:3px solid var(--purple);outline-offset:6px}.wrap{width:min(1200px,calc(100% - 112px));margin-inline:auto}.header{display:flex;align-items:center;justify-content:space-between;padding-block:35px}.wordmark{font-size:22px;font-weight:700;letter-spacing:-.8px}.wordmark span{display:block;font-size:11px;font-weight:500;letter-spacing:.1px;margin-top:4px;color:var(--blue)}nav{display:flex;gap:32px;font-size:13px;font-weight:500}nav a:hover,.text-link:hover{color:var(--purple)}.intro{display:grid;grid-template-columns:1fr 307px;align-items:center;gap:80px;padding-block:70px 95px}.eyebrow{text-transform:uppercase;font-size:10px;letter-spacing:1.9px;font-weight:600;color:var(--blue);margin:0 0 25px}h1,h2,p,figure{margin:0}h1,h2{font-family:'Manrope',Arial,sans-serif;font-weight:500}h1{font-size:clamp(55px,6.7vw,90px);line-height:1.07;letter-spacing:-5px}em{font-style:normal;color:var(--purple)}.bio{font-size:17px;line-height:1.65;max-width:490px;margin-top:30px}.text-link{display:inline-flex;gap:32px;align-items:center;font-size:13px;font-weight:600;margin-top:26px;border-bottom:1px solid var(--blue);padding-bottom:9px;color:var(--blue)}.portrait img{display:block;width:100%;height:auto}.portrait figcaption{font-size:10px;color:var(--muted);margin-top:15px;letter-spacing:.2px}.section-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;gap:20px}.section-heading h2{font-size:24px;letter-spacing:-.8px}.section-heading>span{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}.still{border:0;padding:0;display:block;background:transparent;cursor:pointer;width:100%;text-align:left}.image-region{display:block;position:relative;overflow:hidden;aspect-ratio:var(--w)/var(--h);isolation:isolate;background:#edf0f7}.image-region img{position:absolute;max-width:none;width:calc(568 / var(--w) * 100%);height:auto;left:calc(var(--x) / var(--w) * -100%);top:calc(var(--y) / var(--h) * -100%);transition:filter .3s}.still:hover .image-region img{filter:brightness(1.07)}.reel{position:relative}.image-label{position:absolute;bottom:22px;left:24px;right:24px;display:flex;justify-content:space-between;color:white;font-size:12px;text-shadow:0 1px 8px #000}.work{padding-block:78px 85px}.dot{color:var(--purple)}.film-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px 22px}.film-caption{display:flex;justify-content:space-between;margin-top:13px;font-size:12px}.film-caption>span:last-child{color:var(--muted)}.work-note{max-width:490px;font-size:14px;line-height:1.7;color:var(--muted);margin-top:45px}footer{background:#111116;color:#fff;padding-block:65px 25px}footer .eyebrow{color:#af98de}footer h2{font-size:clamp(46px,6vw,76px);line-height:1.12;letter-spacing:-3px}footer em{color:#b59cE5}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:700px;margin-top:45px}.contact-grid span{display:block;color:#9a9aa7;font-size:11px;margin-bottom:12px}.contact-grid a{font-size:15px}.contact-grid a:hover{color:#b59ce5}.footer-bottom{display:flex;justify-content:space-between;border-top:1px solid #303036;margin-top:60px;padding-top:22px;font-size:10px;color:#a4a4b1}.skip{position:fixed;top:-100px;padding:12px;background:white;z-index:10}.skip:focus{top:0}dialog{border:0;padding:24px;width:min(900px,92vw);max-height:90vh;overflow:auto}dialog::backdrop{background:#111116cc;backdrop-filter:blur(5px)}.dialog-header{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:20px}.dialog-header h2{font-size:20px}.close{border:0;background:transparent;cursor:pointer;padding:8px;font-size:13px}dialog p{font-size:12px;color:var(--muted);margin-top:18px}
+@media(min-width:1500px){.intro{gap:120px}}@media(max-width:800px){.wrap{width:calc(100% - 48px)}.header{padding-block:25px}nav{gap:20px}.intro{grid-template-columns:1fr 220px;gap:35px;padding-block:55px 65px}h1{font-size:55px;letter-spacing:-3px}.bio{font-size:15px}.work{padding-block:55px}.contact-grid{gap:25px}.contact-grid a{font-size:13px}}@media(max-width:600px){.wrap{width:calc(100% - 36px)}.wordmark{font-size:19px}nav{gap:15px;font-size:12px}.intro{grid-template-columns:1fr;gap:38px;padding-top:43px}.intro-copy{order:1}.portrait{order:0;width:160px}.portrait figcaption{display:none}h1{font-size:56px;letter-spacing:-3.5px}.eyebrow{font-size:9px;margin-bottom:20px}.bio{margin-top:23px;max-width:360px}.section-heading{align-items:baseline;margin-bottom:16px}.section-heading h2{font-size:20px}.section-heading>span{font-size:8px;letter-spacing:.4px}.film-grid{grid-template-columns:1fr;gap:26px}.image-label{bottom:12px;left:14px;right:14px;font-size:10px}.work-note{font-size:13px;margin-top:30px}footer{padding-top:45px}footer h2{font-size:49px;letter-spacing:-2.5px}.contact-grid{grid-template-columns:1fr;gap:28px;margin-top:35px}.contact-grid a{font-size:15px}.footer-bottom{margin-top:42px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+#dialog-image iframe{display:block;width:100%;aspect-ratio:16/9;border:0;background:#111}dialog p a{color:var(--blue)}
+
+/* Full-width, vertically stacked video thumbnails. */
+.reel-section.wrap,.work.wrap{width:100%;max-width:none}
+.reel-section>.section-heading,.work>.section-heading{width:min(1200px,calc(100% - 112px));margin-inline:auto}
+.film-grid{grid-template-columns:minmax(0,1fr);gap:0}
+.film{position:relative}
+.film-caption{position:absolute;inset:auto 0 0;margin:0;padding:42px 28px 24px;color:white;background:linear-gradient(transparent,rgba(0,0,0,.45));pointer-events:none}
+.film-caption>span:last-child{color:white}
+.work-note{width:min(490px,calc(100% - 112px));margin-left:max(56px,calc((100% - 1200px)/2))}
+@media(max-width:800px){.reel-section>.section-heading,.work>.section-heading{width:calc(100% - 48px)}.work-note{width:min(490px,calc(100% - 48px));margin-left:24px}}
+@media(max-width:600px){.reel-section>.section-heading,.work>.section-heading{width:calc(100% - 36px)}.work-note{width:calc(100% - 36px);margin-left:18px}.film-caption{padding:32px 18px 16px}}
+
+/* Half-height windows reveal a moving slice of each original thumbnail. */
+.thumbnail-window{display:block;overflow:hidden;position:relative;aspect-ratio:calc(var(--w) / var(--h) * 2);isolation:isolate}
+.thumbnail-window .image-region{width:100%;transform:translateY(calc(-25% + var(--parallax-shift,0px)));will-change:transform}
+@media(prefers-reduced-motion:reduce){.thumbnail-window .image-region{transform:translateY(-25%);will-change:auto}}
+
+/* Hover players sit inside the same cropped, full-bleed thumbnail windows. */
+.hover-preview{position:absolute;inset:0;z-index:1;overflow:hidden;opacity:0;pointer-events:none;transition:opacity .25s ease;background:#111}
+.hover-preview.is-playing{opacity:1}
+.hover-preview iframe{position:absolute;left:0;top:-50%;width:100%;height:200%;border:0;pointer-events:none}
+.film-caption{z-index:2}
+@media(prefers-reduced-motion:reduce){.hover-preview{display:none}}
+
+/* Keep the hover crossfade short so a buffered frame appears promptly. */
+.hover-preview{transition:opacity .08s linear}
+
+/* The reel starts at the top edge, beneath the transparent site header. */
+.header{position:absolute;top:0;left:50%;transform:translateX(-50%);z-index:5;margin:0;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.45)}
+.header .wordmark span{color:#fff}
+.header nav a:hover{color:#d4c2f5}
+.reel-section{position:relative;margin-top:0;scroll-margin-top:0}
+.reel::after{content:"";position:absolute;inset:0 0 auto;height:min(150px,100%);background:linear-gradient(rgba(0,0,0,.62),transparent);pointer-events:none;z-index:1}
+.reel .image-label{z-index:2}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+@media(max-width:600px){.header{padding-block:14px}.header .wordmark span{font-size:10px}.header nav{gap:12px}}
+
+/* Silent, looping header reel; keep the still visible until playback begins. */
+.reel-background{position:absolute;inset:0;overflow:hidden;opacity:0;pointer-events:none;transition:opacity .2s ease}
+.reel-background.is-playing{opacity:1}
+.reel-background iframe{position:absolute;top:50%;left:50%;width:100%;height:100%;min-height:56.25vw;transform:translate(-50%,-50%);border:0;pointer-events:none}
+
+/* A full-screen reel sits behind both the navigation and introduction. */
+#main{display:grid;grid-template-columns:minmax(0,1fr)}
+#reel,#about{grid-area:1 / 1}
+#work{grid-area:2 / 1}
+#reel{height:100svh;min-height:640px;align-self:start}
+.reel{height:100%}
+.reel .thumbnail-window{height:100%;aspect-ratio:auto}
+.reel .thumbnail-window>.image-region{position:absolute;width:max(100%,calc(100svh * 568 / 259));left:50%;top:50%;transform:translate(-50%,-50%);will-change:auto}
+.reel-background iframe{width:100%;min-width:177.78svh;height:100%;min-height:56.25vw}
+.reel::after{inset:0;height:100%;background:linear-gradient(180deg,rgba(0,0,0,.48),rgba(0,0,0,.08) 30%,rgba(0,0,0,.65) 100%)}
+#about{position:relative;z-index:2;align-self:end;align-items:end;padding-block:130px 64px;color:white;pointer-events:none}
+#about a{pointer-events:auto}
+#about .eyebrow,#about .text-link,#about .portrait figcaption{color:white}
+#about em{color:#d4bcff}
+#about .text-link{border-color:rgba(255,255,255,.7)}
+#about .intro-copy{text-shadow:0 2px 18px rgba(0,0,0,.3)}
+#about .portrait figcaption{opacity:.8}
+.reel .image-label{top:110px;bottom:auto;left:auto;right:max(56px,calc((100% - 1200px)/2));gap:32px;padding:12px 18px;border:1px solid rgba(255,255,255,.6);border-radius:30px;background:rgba(0,0,0,.18)}
+@media(max-width:800px){#about{padding-bottom:40px}.reel .image-label{right:24px;top:95px}}
+@media(max-width:600px){#reel{min-height:720px}#about{gap:22px;padding-block:145px 34px}#about .portrait{width:120px}#about h1{font-size:48px;letter-spacing:-2.8px}#about .bio{font-size:14px;line-height:1.6;margin-top:18px}#about .eyebrow{margin-bottom:15px}#about .text-link{margin-top:18px}.reel .image-label{right:18px;top:85px}.reel .thumbnail-window>.image-region{width:max(100%,calc(max(100svh,720px) * 568 / 259))}.reel-background iframe{min-width:max(177.78svh,1280px)}}
+
+/* Let the introduction determine the hero height instead of adding empty viewport space. */
+#reel{height:100%;min-height:0}
+#about{align-self:start;padding-top:160px}
+@media(max-width:800px){#about{padding-top:140px}}
+@media(max-width:600px){#reel{min-height:0}#about{padding-top:145px}}
+
+/* Native 1920px video stills replace the screenshot sprite crops. */
+.image-region.video-still img{inset:0;width:100%;height:100%;object-fit:cover}
+
+/* Expanded films play in place, at their full 16:9 frame. */
+.film-section{position:relative;overflow:hidden}
+.film[hidden],.inline-film-player[hidden]{display:none!important}
+.inline-film-player{position:relative;aspect-ratio:16/9;background:#111}
+.inline-film-player>iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.collapse-film{position:absolute;z-index:3;top:16px;right:18px;border:1px solid rgba(255,255,255,.55);border-radius:24px;background:rgba(0,0,0,.7);color:white;padding:10px 16px;cursor:pointer;font-size:12px}
+@media(max-width:600px){.collapse-film{top:8px;right:8px;padding:8px 12px;font-size:11px}}
+
+/* Arched portrait silhouette with a flat base. */
+.portrait img{border-radius:50% 50% 0 0 / 33.333% 33.333% 0 0}
+
+/* Center the introduction and portrait along the same horizontal line. */
+#about{align-items:center}
+.collapse-film{opacity:1;transition:opacity .12s ease}
+.collapse-film.is-faded{opacity:0}
+.collapse-film:focus-visible{opacity:1;transition:none}
+@media(hover:none){.collapse-film.is-faded{opacity:1}}
+
+.collapse-film{top:auto;bottom:16px;right:18px}
+@media(max-width:600px){.collapse-film{top:auto;bottom:8px;right:8px}}
+
+.collapse-film{bottom:46px}
+@media(max-width:600px){.collapse-film{bottom:38px}}
+
+.collapse-film{left:18px;right:auto}
+@media(max-width:600px){.collapse-film{left:8px;right:auto}}
+
+/* Close icon sits to the left of Vimeo's top-right share control. */
+.collapse-film{top:16px;right:76px;bottom:auto;left:auto;width:48px;height:48px;display:grid;place-items:center;padding:12px;border:0;border-radius:8px;background:rgba(0,15,13,.92);color:#fff}
+.collapse-film svg{display:block;width:100%;height:100%}
+.collapse-film:hover{background:rgba(0,25,22,.98)}
+@media(max-width:600px){.collapse-film{top:8px;right:64px;bottom:auto;left:auto;width:44px;height:44px;padding:11px}}
+
+/* Match Vimeo's 40px share control, with a 15px gap to its left. */
+.collapse-film{top:10px;right:65px;bottom:auto;left:auto;width:40px;height:40px;padding:9px;border-radius:5px}
+@media(max-width:600px){.collapse-film{top:10px;right:65px;bottom:auto;left:auto;width:40px;height:40px;padding:9px}}
+
+/* Stack the matching close control directly below Vimeo's share button. */
+.collapse-film{top:60px;right:10px;bottom:auto;left:auto;width:40px;height:40px;padding:9px;border-radius:5px}
+@media(max-width:600px){.collapse-film{top:60px;right:10px;bottom:auto;left:auto;width:40px;height:40px;padding:9px}}
+
+/* Measured directly from Vimeo: 32px control, 18px icon, 4px radius. */
+.collapse-film{top:50px;right:8px;bottom:auto;left:auto;width:32px;height:32px;min-width:32px;min-height:32px;padding:0;border:0;border-radius:4px;background:rgba(0,0,0,.9)}
+.collapse-film svg{width:18px;height:18px}
+@media(max-width:600px){.collapse-film{top:50px;right:8px;bottom:auto;left:auto;width:32px;height:32px;padding:0}}
+
+/* Vimeo film titles sit in the upper-left corner of each thumbnail. */
+.film-caption{inset:0 0 auto;display:block;padding:24px 28px 42px;background:linear-gradient(rgba(0,0,0,.48),transparent);font-size:14px;font-weight:500;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+@media(max-width:600px){.film-caption{padding:16px 18px 32px;font-size:12px}}
+
+/* Footer profile links align with the contact row on larger screens. */
+footer .wrap{position:relative}
+.social-links{position:absolute;right:0;bottom:108px;display:flex;gap:16px;align-items:center}
+.social-links a{display:grid;place-items:center;width:40px;height:40px;color:white;border:1px solid #494952;border-radius:50%;transition:color .15s,border-color .15s}
+.social-links a:hover{color:#c8afff;border-color:#c8afff}
+.social-links svg{display:block;width:19px;height:19px}
+@media(max-width:800px){.social-links{position:static;margin-top:30px}}
+
+/* Keep the close control visible alongside Vimeo's controls while hovered. */
+
+.collapse-film:focus-visible{opacity:1!important}
+
+
+/* Main navigation is centered beneath the portrait. */
+.portrait nav{display:flex;justify-content:center;align-items:center;gap:26px;margin-top:22px;white-space:nowrap;font-size:13px;color:#fff;pointer-events:auto}
+.portrait nav a:hover{color:#d4bcff}
+@media(max-width:800px){.portrait nav{gap:18px;font-size:12px}}
+@media(max-width:600px){#about .portrait{width:200px;justify-self:center}.portrait nav{gap:20px;margin-top:18px;font-size:12px}}
+
+/* Balance the portrait and introduction around the reel's horizontal midpoint. */
+#about{padding-block:100px;align-self:center}
+.wordmark .director-title{display:flex;align-items:center;gap:5px;line-height:16px}
+.wordmark .specialty-window{display:inline-block;position:relative;overflow:hidden;width:94px;height:16px;margin:0;line-height:16px;vertical-align:bottom}
+.wordmark .specialty-track{position:relative;display:block;height:16px;margin:0}
+.wordmark .specialty-track>span{position:absolute;inset:0;display:block;margin:0;line-height:16px;opacity:0;animation:specialty-drop 9s cubic-bezier(.25,.65,.3,1) infinite}
+.wordmark .specialty-track>span:nth-child(2){animation-delay:-6s}
+.wordmark .specialty-track>span:nth-child(3){animation-delay:-3s}
+@keyframes specialty-drop{0%{transform:translateY(-100%);opacity:0}5%,28%{transform:translateY(0);opacity:1}33.333%,100%{transform:translateY(100%);opacity:0}}
+@media(max-width:800px){#about{padding-block:100px}}
+@media(max-width:600px){#about{padding-block:115px 70px}.wordmark .specialty-window{width:90px}}
+@media(prefers-reduced-motion:reduce){.wordmark .specialty-track>span{animation:none;opacity:0}.wordmark .specialty-track>span:first-child{opacity:1;transform:none}}
+
+/* Faster subtitle rotation: a new specialty every 1.5 seconds. */
+.wordmark .specialty-track>span{animation-duration:4.5s}
+.wordmark .specialty-track>span:nth-child(2){animation-delay:-3s}
+.wordmark .specialty-track>span:nth-child(3){animation-delay:-1.5s}
+
+/* Name and animated title now introduce the main copy block. */
+.intro-copy>.wordmark{display:block;margin-bottom:28px;color:white;width:fit-content;pointer-events:auto}
+.intro-copy .wordmark span{color:white}
+@media(max-width:600px){.intro-copy>.wordmark{margin-bottom:24px}}
+
+/* Match the portrait-plus-navigation height to the introduction copy. */
+@media(min-width:601px){#about{align-items:start}#about .portrait{width:min(100%,var(--aligned-portrait-width,307px));justify-self:center;align-self:start}}
+.wordmark .specialty-track>span{animation-name:specialty-push}
+@keyframes specialty-push{0%,28%{transform:translateY(0);opacity:1}33.333%{transform:translateY(100%);opacity:1}33.334%,94.666%{transform:translateY(-100%);opacity:0}94.667%{transform:translateY(-100%);opacity:1}100%{transform:translateY(0);opacity:1}}
+@media(prefers-reduced-motion:reduce){.wordmark .specialty-track>span{animation:none;opacity:0}.wordmark .specialty-track>span:first-child{opacity:1;transform:none}}
