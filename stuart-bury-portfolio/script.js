@@ -48,7 +48,8 @@ function updateParallax() {
       (viewportHeight / 2 - (bounds.top + bounds.height / 2)) /
       ((viewportHeight + bounds.height) / 2)
     ));
-    return reducedMotion.matches ? 0 : progress * bounds.height * 0.32;
+    const travel = window.innerWidth <= 600 ? 0.1 : 0.32;
+    return reducedMotion.matches ? 0 : progress * bounds.height * travel;
   });
   thumbnailWindows.forEach((thumbnail, index) => {
     thumbnail.style.setProperty('--parallax-shift', positions[index].toFixed(2) + 'px');
@@ -343,4 +344,5 @@ if (introCopy && introPortrait) {
   document.fonts.ready.then(alignIntroPortrait);
   alignIntroPortrait();
 }
+
 

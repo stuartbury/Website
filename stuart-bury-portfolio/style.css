@@ -171,3 +171,87 @@ footer .wrap{position:relative}
 .wordmark .specialty-track>span{animation-name:specialty-push}
 @keyframes specialty-push{0%,28%{transform:translateY(0);opacity:1}33.333%{transform:translateY(100%);opacity:1}33.334%,94.666%{transform:translateY(-100%);opacity:0}94.667%{transform:translateY(-100%);opacity:1}100%{transform:translateY(0);opacity:1}}
 @media(prefers-reduced-motion:reduce){.wordmark .specialty-track>span{animation:none;opacity:0}.wordmark .specialty-track>span:first-child{opacity:1;transform:none}}
+
+/* Phone layout: compact introduction, readable film previews, and touch spacing. */
+@media(max-width:600px){
+  .wrap{width:calc(100% - 40px)}
+  #about{padding-block:40px 44px;gap:26px;align-items:start}
+  #about .portrait{width:128px;justify-self:start}
+  #about .intro-copy{min-width:0}
+  .intro-copy>.wordmark{margin-bottom:23px;font-size:22px}
+  .wordmark .director-title{font-size:11px}
+  #about h1{font-size:clamp(37px,11.4vw,58px);line-height:1.08;letter-spacing:-2px}
+  #about .bio{max-width:380px;font-size:15px;line-height:1.65;margin-top:23px}
+  #about .text-link{min-height:44px;margin-top:17px;padding-block:10px;align-items:center}
+  .work{padding-block:34px 0}
+  .work>.section-heading{width:calc(100% - 40px);margin-bottom:20px}
+  .section-heading h2{font-size:23px}
+  .film .thumbnail-window{aspect-ratio:16/7}
+  .film .thumbnail-window>.image-region{aspect-ratio:16/9;transform:translateY(calc(-11.111111% + var(--parallax-shift,0px)))}
+  .film-caption{padding:14px 20px 32px;font-size:13px;line-height:1.45}
+  .collapse-film::before{content:"";position:absolute;inset:-6px}
+  footer{padding-block:40px 24px}
+  footer h2{font-size:clamp(36px,10.5vw,55px);letter-spacing:-1.8px}
+  .contact-grid{margin-top:30px;gap:24px;min-width:0}
+  .contact-grid a{display:inline-block;font-size:14px;line-height:1.6;overflow-wrap:anywhere}
+  .contact-grid span{margin-bottom:6px}
+  .social-links{margin-top:26px;gap:14px}
+  .social-links a{width:44px;height:44px}
+  .footer-bottom{margin-top:30px;align-items:center;gap:15px}
+  .footer-bottom a{display:flex;align-items:center;min-height:44px}
+  dialog{width:calc(100vw - 24px);max-height:90svh;padding:12px}
+  .dialog-header h2{font-size:16px}
+  .close{min-height:44px}
+}
+@media(max-width:360px){#about .portrait{width:112px}#about{padding-top:30px}.wordmark .director-title{font-size:10px}}
+@media(max-width:600px) and (prefers-reduced-motion:reduce){.film .thumbnail-window>.image-region{transform:translateY(-11.111111%)}}
+
+@media(max-width:600px){#about .portrait{justify-self:end}}
+
+/* Mobile identity mirrors the portrait across the top of the hero. */
+@media(max-width:600px){
+  #about{--mobile-portrait-width:128px}
+  #about .portrait{width:var(--mobile-portrait-width)}
+  .intro-copy>.wordmark{position:absolute;top:40px;left:0;margin:0;max-width:calc(100% - var(--mobile-portrait-width) - 16px);font-size:22px}
+  .intro-copy .wordmark .director-title{display:block;margin-top:6px;line-height:16px;font-size:11px}
+  .intro-copy .wordmark .specialty-window{display:block;margin-top:2px}
+}
+@media(max-width:360px){#about{--mobile-portrait-width:112px}.intro-copy>.wordmark{top:30px;font-size:20px}}
+
+/* Keep desktop columns stable while mobile copy flows beside the portrait. */
+@media(min-width:601px){#about .intro-copy{grid-column:1;grid-row:1}#about .portrait{grid-column:2;grid-row:1}}
+@media(max-width:600px){
+  #about{display:flow-root}
+  #about .portrait{float:right;width:var(--mobile-portrait-width);margin:0 0 24px 18px}
+  #about .intro-copy{display:block}
+  .intro-copy>.wordmark{position:static;max-width:none;margin:0 0 26px;font-size:22px}
+  .intro-copy .wordmark .director-title{display:flex;flex-wrap:nowrap;white-space:nowrap;gap:4px;margin-top:6px;font-size:clamp(8.5px,2.25vw,11px);line-height:16px}
+  .intro-copy .wordmark .specialty-window{display:inline-block;flex:0 0 78px;width:78px;margin:0}
+  #about h1{font-size:clamp(32px,10.8vw,55px);letter-spacing:-1.7px;line-height:1.12}
+  #about .bio{margin-top:24px}
+}
+@media(max-width:360px){#about{--mobile-portrait-width:96px}.intro-copy>.wordmark{font-size:20px}}
+
+/* The background reel is decorative rather than a click-to-play target. */
+.reel{cursor:default}
+@media(max-width:600px){
+  #about{display:grid;grid-template-columns:minmax(0,1fr) var(--mobile-portrait-width);column-gap:18px;row-gap:26px;align-items:center}
+  #about .intro-copy{display:contents}
+  .intro-copy>.wordmark{grid-column:1 / -1;grid-row:1;margin:0}
+  #about .portrait{grid-column:2;grid-row:2;float:none;margin:0;align-self:center;justify-self:end}
+  #about h1{grid-column:1;grid-row:2;font-size:clamp(30px,8.8vw,45px);letter-spacing:-1.3px;align-self:center}
+  #about .bio{grid-column:1 / -1;grid-row:3;margin:0;max-width:100%}
+  #about .text-link{grid-column:1 / -1;grid-row:4;justify-self:start;margin:0}
+}
+
+/* Purple section title on a black heading band. */
+#work{background:#000}
+#work>.section-heading h2,#work>.section-heading .dot{color:#b59ce5}
+
+#work>.section-heading{justify-content:center;text-align:center}
+#work>.section-heading h2{font-weight:800}
+
+/* Use the footer charcoal consistently across dark page surfaces. */
+:root{--dark-surface:#111116}
+#work,footer,.inline-film-player,.hover-preview,#dialog-image iframe{background:var(--dark-surface)}
+.collapse-film,.collapse-film:hover{background:var(--dark-surface)}
